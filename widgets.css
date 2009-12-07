@@ -1,0 +1,279 @@
+/*
+* Buttons
+*/
+
+.button-172 {
+	background: url('gfx/button-172.png') no-repeat;
+	width: 176px;
+	height: 43px;
+	border: none;
+	padding: 2px;
+
+	font: bold 10pt "Glypha";
+	text-transform: uppercase;
+	color: #021626;
+}
+
+.button-172:hover {
+	background-image: url('gfx/button-172-over.png');
+	color: #354551;
+}
+
+.button-172:active {
+	background-image: url('gfx/button-172-down.png');
+}
+
+/*
+* Notifier
+*/
+
+#notifier {
+	position: fixed;
+	/*bottom: 24px;*/
+	bottom: 0;
+	right: 323px;
+	/*height: 108px;*/
+	height: 1px;
+	overflow: hidden;
+	color: white;
+	background: url('gfx/notifier-right.png') no-repeat top right;
+}
+
+#notifier .inner {
+	margin-right: 12px;
+	background: url('gfx/notifier-leftmiddle.png') no-repeat;
+	padding: 19px 24px 19px 24px;
+	height: 70px;
+}
+
+#notifier object {
+	height: 70px;
+	max-width: 70px;
+	float: left;
+}
+
+#notifier h1 {
+	margin: 7px 0px 9px 0px; /*left: 91px*/
+	font: 21px "Egyptienne";
+}
+
+#notifier span {
+	font-size: 15px;
+}
+
+#notifier .subtext1 {
+	/*margin-left: 22px;*/
+	font-family: "Vectora Light";
+	float: left;
+	color: #a8b7c0;
+}
+
+#notifier .subtext1, #notifier h1 {
+	margin-left: 12px;
+}
+
+#notifier .subtext2 {
+	float: right;
+	font-family: "Vectora Black";
+	margin-right: 4px;
+}
+
+/**
+* Pane
+*/
+
+#pane {
+	position: fixed;
+	width: 301px;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+}
+
+#pane .top {
+	background: url('gfx/pane-ne.png') no-repeat top right;
+	height: 29px;
+}
+
+#pane .top > div {
+	background: url('gfx/pane-nw.png') no-repeat top left;
+	right: 12px;
+	left: 0;
+	position: absolute;
+	height: inherit;
+}
+
+#pane .middle {
+	background: url('gfx/pane-e.png') repeat-y top right;
+	top: 29px;
+	bottom: 148px;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#pane .middle > div {
+	background: url('gfx/pane-w.png') repeat-y top left;
+	right: 12px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+#pane .bottom {
+	background: url('gfx/pane-se.png') no-repeat top right;
+	height: 148px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+#pane .bottom > div {
+	background: url('gfx/pane-sw.png') no-repeat top left;
+	right: 14px;
+	left: 0;
+	position: absolute;
+	height: inherit;
+}
+
+#pane .top .content {
+	text-align: right;
+	text-transform: uppercase;
+	color: #021626;
+	font-size: 12px;
+	font-family: "Glypha Bold";
+	margin-right: -12px;
+	padding: 9px 14px;
+}
+
+#pane .middle .content {
+	margin: 10px 12px 0 24px;
+	color: white;
+	font-size: 13px;
+	line-height: 21px;
+}
+
+#pane .bottom .content {
+	/*margin-right: -14px;*/
+	margin: 10px -2px 12px 12px;
+	font-family: "Memoria";
+	color: white;
+}
+
+#pane .photo {
+	max-width: 99%; /* hopefully this will be about -4 pixels */
+	border: 2px solid #f2bc1b;
+}
+
+#pane h1 {
+	font: 26px/28px "Centennial Black";
+	margin-top: 7px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #87a0ad;
+	text-shadow: #202c34 1px 1px 3px;
+	text-transform: uppercase;
+}
+
+#pane h1, #pane .photo{
+	margin-bottom: 12px;
+}
+
+#pane .middle .content {
+	font: 13px/21px "Vectora";
+}
+
+#pane .bottom #prompt {
+	position: absolute;
+	top: 108px;
+	left: 40px;
+	width: 249px;
+	height: 28px;
+	border: none;
+	background: none;
+	color: #f2bc1b;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+#pane .bottom #scrollback {
+	/*max-height: 85px;*/ /* will actually be one less than this */
+	font-size: 8px;
+	padding: 3px 8px 4px;
+	text-transform: lowercase;
+	/*background-color: rgba(0, 255, 0, 0.33);*/
+	overflow: hidden;
+}
+
+#pane .bottom #scrollback .systemResponse {
+	color: #bdd1d9;
+	margin-left: 10px;
+}
+
+/**
+* Floor Chooser
+*/
+
+#floorchooser {
+	position: fixed;
+	top: 18px;
+	right: 329px;
+	width: 101px;
+}
+
+#floorchooser .floor {
+	height: 19px;
+	margin-bottom: 18px;
+	display: block;
+}
+
+/*
+* Noticer
+*/
+
+#noticer {
+	width: 465px;
+	position: fixed;
+	left: 50%;
+	bottom: 90px;
+	background: url('gfx/noticer-top.png') no-repeat;
+	min-height: 16px;
+	margin-left: -232px;
+	font: 13px "Vectora";
+}
+
+#noticer .inner {
+	margin-top: 8px;
+	background: url('gfx/noticer-middle.png') bottom;
+	padding: 3px 3px 3px 18px;
+}
+
+#noticer .content {
+	margin: 2px 11px 10px;
+}
+
+#noticer .exclamation {
+	background: url('gfx/noticer-exclamation.png') no-repeat 50% 50%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 3px;
+	width: 15px;
+}
+
+/**
+* Money Counter
+*/
+
+#money {
+	position: fixed;
+	top: 17px;
+	right: 444px;
+	float: left;
+	height: 17px;
+	background: url('gfx/dollar.png') no-repeat top left;
+	color: white;
+	padding-left: 41px;
+	padding-top: 2px;
+}

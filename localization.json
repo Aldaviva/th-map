@@ -1,0 +1,15 @@
+{
+	"item404": "You ransack the room, desparately looking for a _. It is nowhere to be found.",
+	"command404": "You can't figure out how to perform that crazy action.",
+	"room404": "You're quite certain there has never been a Room _ in this building.",
+	"roomSame": "You're already in this room, numbnuts!",
+	"floorDifferent": "Room _ isn't on this floor! Your sense of direction is terrible!",
+	"roomEnter": "You dashingly saunter into Room _.",
+	"roomLeave": "You sheepishly flee from Room _.",
+	"floor404": "Okay. Seriously. This entire building only has five floors. Floor _ is not one of them.",
+	"floorSame": "Well that was simple. Especially since you were already on Floor _.",
+	"floorEnter": "Since the escalator is out, you risk the rickety, dangerous stairway. You arrive on Floor _.",
+	"look": "After a cursory glance around, you spy _.",
+	"lookFloor": "This floor connects to several mysterious rooms, including _.",
+	"roomLocked": "Room _ is locked. No matter how hard you try, you can't break the door down."
+}

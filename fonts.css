@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Centennial Black";
+  src: url("fonts/CentennialLTStd-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Centennial Bold";
+  src: url("fonts/CentennialLTStd-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Egyptienne";
+  src: url("fonts/EgyptienneFLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Vectora Black";
+  src: url("fonts/VectoraLTStd-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Vectora Bold";
+  src: url("fonts/VectoraLTStd-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Vectora Light";
+  src: url("fonts/VectoraLTStd-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Vectora";
+  src: url("fonts/VectoraLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Glypha";
+  src: url("fonts/GlyphaLTStd.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Glypha Bold";
+  src: url("fonts/GlyphaLTStd-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Memoria";
+  src: url("fonts/Memoria.ttf") format("truetype");
+}

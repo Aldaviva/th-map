@@ -1,0 +1,17 @@
+syntax: glob
+*.psd
+*.ai
+Design/**
+Design/*
+fonts/*
+*/Thumbs.db
+nbproject/*
+
+
+syntax: regexp
+\.rej$
+\.chg\..*$
+\.conflict\~$
+\.orig\..*$
+\.orig$
+

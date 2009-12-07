@@ -1,0 +1,11 @@
+11	frontwall
+10	abbie 233,163
+9	umbrella 169, 229
+8	kindle 133, 189
+7	pins 43, 98
+6	cloak 185, 143
+5	keys 168, 206
+4	box 156, 109
+3	door 292, 190
+2	front furn 41, 109
+1	floor
