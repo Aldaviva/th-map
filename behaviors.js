@@ -66,8 +66,17 @@ var behaviors = { //the ids here are the titles, not names, of objects
 			RoomManager.leaveRoom.bind(RoomManager)();
 		}
 	},
-	
+	'room209': {
+		'DOOR': function(){
+			RoomManager.leaveRoom.bind(RoomManager)();
+		}
+	},
 	'room210': {
+		'DOOR': function(){
+			RoomManager.leaveRoom.bind(RoomManager)();
+		}
+	},
+	'room211': {
 		'DOOR': function(){
 			RoomManager.leaveRoom.bind(RoomManager)();
 		}
