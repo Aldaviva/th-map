@@ -65,4 +65,13 @@ while($result = $results->fetch()){
 	echo "people['".strtoupper($result['name'])."'] = '{$result['roomid']}';\n";
 }
 
+echo "\n\nvar a;\n";
+$photoImgs = scandir('photos');
+foreach(array_filter($photoImgs, function ($str) {
+	return strripos($str, '.jpg') !== false;
+}) as $str){
+//foreach($photoImgs as $str){
+	echo "a = new Image();\na.src = 'photos/$str';\n";
+}
+
 ?>

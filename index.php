@@ -45,8 +45,8 @@
 							<img class="photo" alt="" src="photos/welcome.png" />
 
 							<div class="description">
-								Welcome! You are a freshman at BROWN UNIVERSITY, and you are a new member of TECH HOUSE. You find yourself standing on the second floor of the  HOUSE, awed by the gleaming splendor. Promises of technology beyond your wildest dreams beckoned you to join the HOUSE, and now here you are. In September, you will move in to your own room, but for now you are visiting TECH HOUSE to explore your future home.<br />
-								You notice that some PEOPLE are in their ROOMS. Maybe you should visit them.
+								<p>Welcome! You are a freshman at BROWN UNIVERSITY, and you are a new member of TECH HOUSE. You find yourself standing on the second floor of the  HOUSE, awed by the gleaming splendor. Promises of technology beyond your wildest dreams beckoned you to join the HOUSE, and now here you are. In September, you will move in to your own room, but for now you are visiting TECH HOUSE to explore your future home.</p>
+								<p>You notice that some PEOPLE are in their ROOMS. Maybe you should visit them.</p>
 							</div>
 						</div>
 					</div>

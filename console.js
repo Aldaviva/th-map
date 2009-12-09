@@ -75,6 +75,9 @@ var Scrollback = {
 
 	init: function(){
 		this.scrollback = $('scrollback');
+		$$('.bottom')[0].observe('click', function(){
+			$('prompt').focus();
+		});
 	},
 
 	add: function(str, isUserCmd){

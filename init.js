@@ -7,7 +7,7 @@ function domLoaded(){
 	 * Set up text box listener
 	 */
 
-	$('prompt').observe('keypress', handlePrompt);
+	$('prompt').observe('keypress', handlePrompt).focus();
 
 	/*
 	 * Set up money counter

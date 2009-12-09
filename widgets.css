@@ -76,6 +76,7 @@
 	float: right;
 	font-family: "Vectora Black";
 	margin-right: 4px;
+	padding-left: 1em;
 }
 
 /**
@@ -182,6 +183,10 @@
 
 #pane .middle .content {
 	font: 13px/21px "Vectora";
+}
+
+#pane .middle .content p {
+	margin-bottom: 1em;
 }
 
 #pane .bottom #prompt {

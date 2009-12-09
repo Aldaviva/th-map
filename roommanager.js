@@ -6,6 +6,9 @@ var RoomManager = {
 	busy: false,
 
 	enterRoom: function(target){
+		var scrollDuration = 0.25;
+		var scrollX, scrollY, roomPos, roomDiv;
+
 		if(this.busy) return;
 		this.busy = true;
 		if(!this._isValidRoomNo(target)){
@@ -17,18 +20,34 @@ var RoomManager = {
 		} else if(rooms[target].locked){
 			notice(localize('roomLocked', target));
 			setPaneContent('GO', 'Room '+target, rooms[target].description, rooms[target].largesrc);
+
+			roomDiv = $('room'+target);
+			roomPos = roomDiv.cumulativeOffset();
+			scrollX = (roomPos[0] + (roomDiv.getWidth() - document.viewport.getWidth())/2).round();
+			scrollY = (roomPos[1] + (roomDiv.getHeight() - document.body.clientHeight)/2).round();
+			scrollTo(scrollX, scrollY);
+
 		} else {
 			this.currentRoom = target;
 			this._toggleRoomToForeground(target);
+			
+			roomDiv = $('room'+this.currentRoom);
+
+//			Effect.ScrollTo('room'+this.currentRoom, {duration: scrollDuration});
+			roomPos = roomDiv.cumulativeOffset();
+			scrollX = (roomPos[0] + roomDiv.getWidth()/2 - (document.viewport.getWidth() - $('pane').getWidth())/2).round();
+			scrollY = (roomPos[1] + roomDiv.getHeight()/2 - document.body.clientHeight/2).round();
+			scrollTo(scrollX, scrollY);
+			
 
 			var dimexit = $('floor'+this.currentFloor).down('.floor_dimexit');
-			dimexit.appear({transition: Effect.Transitions.fi});
+			dimexit.appear({transition: Effect.Transitions.fi, delay: scrollDuration});
 
-			$('floorchooser').fade({transition: Effect.Transitions.fi});
+			$('floorchooser').fade({transition: Effect.Transitions.fi, delay: scrollDuration});
 
 			var frontWall = $('room'+this.currentRoom+'-frontwall');
 			if(frontWall != null){
-				frontWall.fade({transition: Effect.Transitions.fi});
+				frontWall.fade({transition: Effect.Transitions.fi, delay: scrollDuration});
 			}
 			
 			notice(localize('roomEnter', target));
@@ -110,7 +129,7 @@ var RoomManager = {
 		}
 		var description;
 		if(this.currentRoom != null){
-			description = rooms[this.currentRoom].description + "<br /><br />";
+			description = rooms[this.currentRoom].description + "<br />";
 			if(rooms[this.currentRoom].activesprites)
 			description += localize('look', Object.keys(rooms[this.currentRoom].activesprites).sentenceJoin(", "));
 			setPaneContent(mode, 'Room '+this.currentRoom, description, rooms[this.currentRoom].largesrc);
@@ -118,7 +137,7 @@ var RoomManager = {
 		} else {
 			//you are in a hallway. you see doors to rooms 1, 2, 3, ...
 			//you see objects in the hallway foo, bar, ...
-			description = floors[this.currentFloor].description + "<br /><br />";
+			description = floors[this.currentFloor].description + "<br />";
 			description += localize('look', Object.keys(floors[this.currentFloor].activesprites).sentenceJoin(", "));
 			description += localize('lookFloor', floors[this.currentFloor].rooms.sentenceJoin(", "));
 			setPaneContent(mode, 'Floor '+this.currentFloor, description, floors[this.currentFloor].largesrc);
@@ -131,10 +150,16 @@ var RoomManager = {
 		}
 		if(this.currentRoom != null){
 			if(rooms[this.currentRoom] && rooms[this.currentRoom].activesprites[objName]){
+				var description = rooms[this.currentRoom].activesprites[objName].description;
+				if(behaviors['room'+this.currentRoom].interactions && behaviors['room'+this.currentRoom].interactions[objName.toLowerCase()]){
+					$H(behaviors['room'+this.currentRoom].interactions[objName.toLowerCase()]).each(function(pair){
+						description += "<br /><a href='#' onclick='behaviors[\"room"+this.currentRoom+"\"][\""+pair.value+"\"](); return false;'>"+pair.key+"</a>";
+					}, this);
+				}
 				setPaneContent(
 					mode,
 					objName,
-					rooms[this.currentRoom].activesprites[objName].description,
+					description,
 					rooms[this.currentRoom].activesprites[objName].largesrc
 				);
 			} else {

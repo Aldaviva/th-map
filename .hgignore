@@ -2,8 +2,8 @@ syntax: glob
 *.psd
 *.ai
 Design/**
-Design/*
-fonts/*
+Design/*.*
+fonts/*.*
 */Thumbs.db
 nbproject/*
 
