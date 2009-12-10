@@ -7,7 +7,7 @@ require_once 'library.php';
 
 
 //echo "var floorNumbers = [".implode(',',$db->query('SELECT DISTINCT id/100 FROM rooms')->fetchAll(PDO::FETCH_COLUMN,0))."];\n";
-echo "var floorNumbers = [".implode(',',$db->query('SELECT id FROM floors')->fetchAll(PDO::FETCH_COLUMN,0))."];\n";
+echo "var floorNumbers = [".implode(',',$db->query('SELECT id FROM floors ORDER BY id desc')->fetchAll(PDO::FETCH_COLUMN,0))."];\n";
 
 echo "\nvar floors = new Object();\n";
 foreach($db->query('SELECT id, floorx, floory, width, height, description, largesrc, rooms FROM floors LEFT JOIN (SELECT floor, array_agg(id) AS rooms FROM rooms GROUP BY floor) AS subquery ON floors.id = subquery.floor;', PDO::FETCH_OBJ) as $result){
